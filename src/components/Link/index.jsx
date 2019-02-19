@@ -34,7 +34,11 @@ const A = styled.a`
 
 export default ({ label, target, external }) => {
   if (external) {
-    return <A href={target}>{label}</A>;
+    return (
+      <A href={target} target="_blank">
+        {label}
+      </A>
+    );
   } else {
     return <RouterLink to={target}>{label}</RouterLink>;
   }
