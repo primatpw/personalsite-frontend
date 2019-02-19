@@ -15,4 +15,8 @@ export default createGlobalStyle`
   p, a {
     font-family: 'Lora', serif;
   }
+
+  body {
+    background: #E8E2CC;
+  }
 `;
