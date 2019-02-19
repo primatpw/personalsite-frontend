@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
-return createGlobalStyle`
+export default createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Karla:400,400i,700,700i|Lora:400,400i,700,700i');
 
   h1,
