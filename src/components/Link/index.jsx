@@ -1,7 +1,8 @@
+import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { Link as RLink } from "react-router-dom";
 
-export default styled(Link)`
+const RouterLink = styled(RLink)`
   &,
   &:visited {
     color: #08000f;
@@ -16,3 +17,25 @@ export default styled(Link)`
     text-decoration-color: #95b27b;
   }
 `;
+
+const A = styled.a`
+  &,
+  &:visited {
+    color: #08000f;
+    font-family: "Karla";
+    padding: 0.5em 0;
+    transition: text-decoration 0.3s ease-out;
+  }
+
+  &:hover {
+    text-decoration-color: #95b27b;
+  }
+`;
+
+export default ({ label, target, external }) => {
+  if (external) {
+    return <A href={target}>{label}</A>;
+  } else {
+    return <RouterLink to={target}>{label}</RouterLink>;
+  }
+};

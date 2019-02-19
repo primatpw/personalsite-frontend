@@ -4,7 +4,6 @@ import * as serviceWorker from "./serviceWorker";
 
 import Routes from "./containers/Routes";
 
-import "normalize.css";
 import GlobalStyles from "./globalStyles";
 
 ReactDOM.render(

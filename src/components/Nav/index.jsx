@@ -14,9 +14,11 @@ export default () => (
   <Container>
     <Wrapper>
       {links.map(({ label, target }) => (
-        <Link key={`link-${label}-to-${target}`} to={target}>
-          {label}
-        </Link>
+        <Link
+          key={`link-${label}-to-${target}`}
+          target={target}
+          label={label}
+        />
       ))}
     </Wrapper>
   </Container>
