@@ -9,12 +9,10 @@ export default styled(Link)`
     letter-spacing: 0.6em;
     font-size: 1.35em;
     padding: 0.5em 0;
-    text-decoration: none;
     transition: text-decoration 0.3s ease-out;
   }
 
   &:hover {
-    text-decoration: underline;
     text-decoration-color: #95b27b;
   }
 `;
