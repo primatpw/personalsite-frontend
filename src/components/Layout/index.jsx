@@ -1,10 +1,18 @@
 import React from "react";
-import Nav from "../Nav";
-import Container from "../Container";
+import styled from "styled-components";
+import { Nav, Container, Footer } from "../index";
+
+const Wrapper = styled(Container)`
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+`;
 
 export default ({ children }) => (
-  <Container>
+  <Wrapper>
     <Nav />
     {children}
-  </Container>
+    <Footer />
+  </Wrapper>
 );

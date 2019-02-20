@@ -3,10 +3,6 @@ import styled from "styled-components";
 import { Emoji, Link } from "../../components";
 
 const ClassHelperSection = styled.section`
-  #title {
-    margin-top: 1.5em;
-  }
-
   #additional {
     margin-top: 1.5em;
   }

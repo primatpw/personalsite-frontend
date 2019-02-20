@@ -6,7 +6,7 @@ import { API_URL } from "../../api";
 
 const ClassHelperSection = styled.section`
   #title {
-    margin: 1.5em 0 0.75em 0;
+    margin-bottom: 0.75em;
   }
   p {
     line-height: 1.75em;

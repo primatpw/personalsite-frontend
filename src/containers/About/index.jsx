@@ -4,7 +4,7 @@ import { Emoji } from "../../components";
 
 const ClassHelperSection = styled.section`
   #title {
-    margin: 1.5em 0 0.75em 0;
+    margin-bottom: 0.75em;
   }
   p {
     text-indent: 2em;

@@ -5,5 +5,7 @@ import Link from "./Link";
 import Input from "./Input";
 import TextArea from "./TextArea";
 import Button from "./Button";
+import Footer from "./Footer";
+import Nav from "./Nav";
 
-export { Container, Layout, Emoji, Link, Input, TextArea, Button };
+export { Container, Layout, Emoji, Link, Input, TextArea, Button, Footer, Nav };
