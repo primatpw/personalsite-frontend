@@ -2,6 +2,39 @@ import React from "react";
 import styled from "styled-components";
 import { Emoji, Link, Input, TextArea, Button } from "../../components";
 
+const dummy = [
+  {
+    name: "Dave Nathanael",
+    email: "davenathanaeld@gmail.com",
+    comment: "lorem ipsum hehehe lorem ipsum hehehe",
+    date: new Date()
+  },
+  {
+    name: "Dave Nathanael",
+    email: "davenathanaeld@gmail.com",
+    comment: "lorem ipsum hehehe lorem ipsum hehehe",
+    date: new Date()
+  },
+  {
+    name: "Dave Nathanael",
+    email: "davenathanaeld@gmail.com",
+    comment: "lorem ipsum hehehe lorem ipsum hehehe",
+    date: new Date()
+  },
+  {
+    name: "Dave Nathanael",
+    email: "davenathanaeld@gmail.com",
+    comment: "lorem ipsum hehehe lorem ipsum hehehe",
+    date: new Date()
+  },
+  {
+    name: "Dave Nathanael",
+    email: "davenathanaeld@gmail.com",
+    comment: "lorem ipsum hehehe lorem ipsum hehehe",
+    date: new Date()
+  }
+];
+
 const ClassHelperSection = styled.section`
   #title {
     margin: 1.5em 0 0.75em 0;
@@ -10,8 +43,21 @@ const ClassHelperSection = styled.section`
     line-height: 1.75em;
   }
 
+  form {
+    margin-bottom: 3em;
+  }
+
   .form-control {
     display: flex;
+  }
+
+  .comment {
+    margin: 1em;
+    // border: 1px solid red;
+  }
+
+  .comment-info {
+    font-size: 1em;
   }
 `;
 
@@ -22,10 +68,18 @@ class Contact extends React.PureComponent {
     this.state = {
       name: "",
       email: "",
-      comment: ""
+      comment: "",
+      comments: []
     };
 
     this.inputChange = this.inputChange.bind(this);
+    this.submit = this.submit.bind(this);
+  }
+
+  componentDidMount() {
+    this.setState({
+      comments: dummy
+    });
   }
 
   inputChange(e) {
@@ -35,8 +89,17 @@ class Contact extends React.PureComponent {
     });
   }
 
+  submit(e) {
+    e.preventDefault();
+    const { name, email, comment } = this.state;
+    if (name !== "" && email !== "" && comment !== "") {
+      // post comment to backend
+      console.log("Successfully posted your comment!");
+    }
+  }
+
   render() {
-    const { name, email, value } = this.state;
+    const { name, email, comment, comments } = this.state;
     return (
       <ClassHelperSection>
         <h3 id="title">You can see me on</h3>
@@ -83,7 +146,7 @@ class Contact extends React.PureComponent {
           <div className="form-control">
             <TextArea
               name="comment"
-              value={value}
+              value={comment}
               rows={1}
               cols={80}
               placeholder="Write something"
@@ -97,6 +160,18 @@ class Contact extends React.PureComponent {
             </Button>
           </div>
         </form>
+        <h3>What others think of me</h3>
+        <section>
+          {comments.map(c => (
+            <div className="comment">
+              <p className="comment-content">"{c.comment}"</p>
+              <p className="comment-info">
+                By <Link target={`mailto:${c.email}`} label={c.name} external />{" "}
+                at {c.date.toDateString()}
+              </p>
+            </div>
+          ))}
+        </section>
       </ClassHelperSection>
     );
   }
