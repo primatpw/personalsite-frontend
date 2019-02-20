@@ -1,39 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { Emoji, Link, Input, TextArea, Button } from "../../components";
-
-const dummy = [
-  {
-    name: "Dave Nathanael",
-    email: "davenathanaeld@gmail.com",
-    comment: "lorem ipsum hehehe lorem ipsum hehehe",
-    date: new Date()
-  },
-  {
-    name: "Dave Nathanael",
-    email: "davenathanaeld@gmail.com",
-    comment: "lorem ipsum hehehe lorem ipsum hehehe",
-    date: new Date()
-  },
-  {
-    name: "Dave Nathanael",
-    email: "davenathanaeld@gmail.com",
-    comment: "lorem ipsum hehehe lorem ipsum hehehe",
-    date: new Date()
-  },
-  {
-    name: "Dave Nathanael",
-    email: "davenathanaeld@gmail.com",
-    comment: "lorem ipsum hehehe lorem ipsum hehehe",
-    date: new Date()
-  },
-  {
-    name: "Dave Nathanael",
-    email: "davenathanaeld@gmail.com",
-    comment: "lorem ipsum hehehe lorem ipsum hehehe",
-    date: new Date()
-  }
-];
+import axios from "axios";
+import { API_URL } from "../../api";
 
 const ClassHelperSection = styled.section`
   #title {
@@ -76,9 +45,10 @@ class Contact extends React.PureComponent {
     this.submit = this.submit.bind(this);
   }
 
-  componentDidMount() {
+  async componentDidMount() {
+    const res = await axios.get(`${API_URL}/comments`);
     this.setState({
-      comments: dummy
+      comments: res.data.data
     });
   }
 
@@ -163,11 +133,11 @@ class Contact extends React.PureComponent {
         <h3>What others think of me</h3>
         <section>
           {comments.map(c => (
-            <div className="comment">
+            <div className="comment" key={c._id}>
               <p className="comment-content">"{c.comment}"</p>
               <p className="comment-info">
                 By <Link target={`mailto:${c.email}`} label={c.name} external />{" "}
-                at {c.date.toDateString()}
+                at {new Date(c.createdAt).toDateString()}
               </p>
             </div>
           ))}
