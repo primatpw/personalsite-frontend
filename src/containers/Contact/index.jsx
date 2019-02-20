@@ -43,9 +43,14 @@ class Contact extends React.PureComponent {
 
     this.inputChange = this.inputChange.bind(this);
     this.submit = this.submit.bind(this);
+    this.fetchComments = this.fetchComments.bind(this);
   }
 
-  async componentDidMount() {
+  componentDidMount() {
+    this.fetchComments();
+  }
+
+  async fetchComments() {
     const res = await axios.get(`${API_URL}/comments`);
     this.setState({
       comments: res.data.data
@@ -59,10 +64,24 @@ class Contact extends React.PureComponent {
     });
   }
 
-  submit(e) {
+  async submit(e) {
     e.preventDefault();
     const { name, email, comment } = this.state;
     if (name !== "" && email !== "" && comment !== "") {
+      const res = await axios.post(`${API_URL}/comments`, {
+        name,
+        email,
+        comment
+      });
+
+      if (res.status) {
+        this.setState({
+          name: "",
+          email: "",
+          comment: ""
+        });
+        this.fetchComments();
+      }
       // post comment to backend
       console.log("Successfully posted your comment!");
     }
