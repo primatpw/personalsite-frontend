@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Emoji, Link } from "../../components";
 
 const ClassHelperSection = styled.section`
-  #greetings {
+  #title {
     margin-top: 1.5em;
   }
 
@@ -18,7 +18,7 @@ const ClassHelperSection = styled.section`
 
 const Home = () => (
   <ClassHelperSection>
-    <h1 id="greetings">
+    <h1 id="title">
       Greetings!
       <Emoji emoji="👋" />
     </h1>
@@ -28,7 +28,7 @@ const Home = () => (
       <Emoji emoji="📚" />
       aspiring student, and on my path to become a <u>full-stack developer</u>.
     </h2>
-    <h3 id="additional">
+    <p id="additional">
       *If you're an <i>office guy</i>, here's my{" "}
       <Link
         label="LinkedIn page"
@@ -42,7 +42,7 @@ const Home = () => (
         external
       />
       . Without emojis, of course.
-    </h3>
+    </p>
   </ClassHelperSection>
 );
 

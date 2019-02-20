@@ -21,7 +21,6 @@ export default createGlobalStyle`
   }
 
   ol, ul {
-    list-style: none;
   }
 
   img {
@@ -43,12 +42,10 @@ export default createGlobalStyle`
   h3,
   h4,
   h5,
-  h6 {
+  h6,
+  p,
+  a {
     font-family: 'Karla', sans-serif;
-  }
-
-  p, a {
-    font-family: 'Lora', serif;
   }
 
   body {
@@ -62,6 +59,9 @@ export default createGlobalStyle`
     font-size: 3em;
   }
   h3 {
+    font-size: 2.5em;
+  }
+  p {
     font-size: 1.5em;
     font-weight: normal;
   }
