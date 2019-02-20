@@ -8,4 +8,17 @@ Built using:
 - React Router
 - Styled Components
 
-Available also on my [GitHub](https://github.com/davenathanael/tugasRistek2019-webdev)
+- Express
+- Mongoose
+- MongoDB Atlas
+
+Frontend repo: [GitHub](https://github.com/davenathanael/ristek-personalsite-frontend)
+Backend repo: [GitHub](https://github.com/davenathanael/ristek-personalsite-backend)
+
+## How to run
+
+- Clone both repositories
+- For frontend, run `yarn && yarn start`
+- For backend, run `yarn && yarn start`
+
+Note: the frontend app will still fetch data from my hosted Heroku API. You would want to change some urls (API url at frontend, MongoDB url string at backend)
