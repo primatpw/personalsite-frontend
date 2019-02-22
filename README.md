@@ -2,6 +2,8 @@
 
 A simple website developed as an assignment for RISTEK 2019 Web Development junior member application.
 
+Site is live at [davenathanael.netlify.com](https://davenathanael.netlify.com)
+
 Built using:
 
 - React (Bootstrapped using [create-react-app](https://github.com/facebook/create-react-app))
