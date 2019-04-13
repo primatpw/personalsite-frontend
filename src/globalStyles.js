@@ -57,4 +57,8 @@ export default createGlobalStyle`
     font-size: 1.5em;
     font-weight: normal;
   }
+
+  mark {
+    background-color: #b7dba2;
+  }
 `;

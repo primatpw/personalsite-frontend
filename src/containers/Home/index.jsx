@@ -16,13 +16,12 @@ const Home = () => (
   <ClassHelperSection>
     <h1 id="title">
       Greetings!
-      <Emoji emoji="👋" />
     </h1>
     <h2>
-      I'm <u>Dave</u>,
+      I'm Dave,
       <Emoji emoji="🖥️" />a code geek,
       <Emoji emoji="📚" />
-      aspiring student, and on my path to become a <u>full-stack developer</u>.
+      aspiring student, and on my path to become a <mark>full-stack developer</mark>.
     </h2>
     <p id="additional">
       *If you're an <i>office guy</i>, here's my{" "}
