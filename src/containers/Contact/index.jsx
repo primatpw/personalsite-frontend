@@ -8,9 +8,6 @@ const ClassHelperSection = styled.section`
   #title {
     margin-bottom: 0.75em;
   }
-  p {
-    line-height: 1.75em;
-  }
 
   form {
     margin-bottom: 3em;
@@ -22,7 +19,6 @@ const ClassHelperSection = styled.section`
 
   .comment {
     margin: 1em;
-    // border: 1px solid red;
   }
 
   .comment-info {

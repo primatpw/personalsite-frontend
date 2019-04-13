@@ -21,14 +21,31 @@ const RouterLink = styled(RLink)`
 const A = styled.a`
   &,
   &:visited {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+
     color: #08000f;
     font-family: "Karla";
-    padding: 0.5em 0;
-    transition: text-decoration 0.3s ease-out;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    background-color: #AFD190;//#fdd104;
+    z-index: -10;
+    transition: all .1s linear;
   }
 
   &:hover {
-    text-decoration-color: #95b27b;
+    cursor: pointer;
+    &:after {
+      bottom: 2px;
+    }
   }
 `;
 
