@@ -14,8 +14,8 @@ Built using:
 - Mongoose
 - MongoDB Atlas
 
-Frontend repo: [GitHub](https://github.com/davenathanael/ristek-personalsite-frontend)
-Backend repo: [GitHub](https://github.com/davenathanael/ristek-personalsite-backend)
+Frontend repo: [GitHub](https://github.com/davenathanael/personalsite-frontend)
+Backend repo: [GitHub](https://github.com/davenathanael/personalsite-backend)
 
 ## How to run
 
