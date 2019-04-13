@@ -17,10 +17,6 @@ export default createGlobalStyle`
   body, h1, h2, h3, h4, h5, h6, p, ol, ul {
     margin: 0;
     padding: 0;
-    // font-weight: normal;
-  }
-
-  ol, ul {
   }
 
   img {
@@ -46,10 +42,6 @@ export default createGlobalStyle`
   p,
   a {
     font-family: 'Karla', sans-serif;
-  }
-
-  body {
-    background: #E8E2CC;
   }
 
   h1 {
