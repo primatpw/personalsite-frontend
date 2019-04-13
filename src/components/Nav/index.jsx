@@ -14,9 +14,8 @@ const Menu = styled.div`
 
   position: absolute;
   margin: 3em auto;
-  border-radius: 1em;
   padding: 1em;
-  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.5);
   background: white;
 
   z-index: 1000;
@@ -98,12 +97,11 @@ const Nav = () => {
     <Wrapper>
       <Toggle onClick={() => setVisibility(!visible)} visible={visible}/>
       <Menu visible={visible}>
-        {links.map(({ label, target, description }) => (
+        {links.map(({ label, target }) => (
           <NavLink
             key={`link-${label}-to-${target}`}
             to={target}
             label={label}
-            description={description}
           />
         ))}
       </Menu>

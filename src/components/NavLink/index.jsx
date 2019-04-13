@@ -25,12 +25,15 @@ const RouterLink = styled(NLink).attrs({
   &:hover {
       background: #eeeeee;
   }
+
+  & h3 {
+    font-size: 1.5em;
+  }
 `;
 
 export default ({ to, label, description }) =>  (
     <RouterLink to={to} exact={true}>
-        <p className="link-title">{label}</p>
-        <p className="link-desc">{description}</p>
+        <h3>{label}</h3>
     </RouterLink>
 );
 
