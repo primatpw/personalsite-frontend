@@ -24,6 +24,11 @@ const ClassHelperSection = styled.section`
   .comment-info {
     font-size: 1em;
   }
+
+  #comments {
+    display: ${props => props.finishedLoadingComments ? 'block' : 'none'};
+    transition: all .5s ease-out;
+  }
 `;
 
 class Contact extends React.PureComponent {
@@ -84,9 +89,9 @@ class Contact extends React.PureComponent {
   }
 
   render() {
-    const { name, email, comment, comments } = this.state;
+    const { name, email, comment, comments } = this.state;    
     return (
-      <ClassHelperSection>
+      <ClassHelperSection finishedLoadingComments={comments.length !== 0}>
         <h3 id="title">You can see me on</h3>
         <p>my{' '}
           <Link
@@ -147,8 +152,8 @@ class Contact extends React.PureComponent {
           </div>
         </form>
         <h3>What others think of me</h3>
-        <Loader />
-        <section>
+        {comments.length === 0 && <Loader />} 
+        <section id="comments">
           {comments.map(c => (
             <div className="comment" key={c._id}>
               <p className="comment-content">"{c.comment}"</p>
