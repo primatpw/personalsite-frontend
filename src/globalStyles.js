@@ -8,7 +8,16 @@ export default createGlobalStyle`
   html {
     box-sizing: border-box;
     font-size: 16px;
+
+    @media (max-width: 768px) {
+      font-size: 14px;
+    }
+
+    @media (max-width: 576px) {
+      font-size: 10px;
+    }
   }
+
 
   *, *:before, *:after {
     box-sizing: inherit;
@@ -56,5 +65,9 @@ export default createGlobalStyle`
   p {
     font-size: 1.5em;
     font-weight: normal;
+  }
+
+  mark {
+    background-color: #b7dba2;
   }
 `;

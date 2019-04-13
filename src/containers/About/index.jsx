@@ -17,10 +17,10 @@ const About = () => (
     <h3 id="title">Things about me.</h3>
     <p className="desc">
       I always like to create <i>fun-to-make</i> things, like{" "}
-      <u>applications</u>
+      <mark>applications</mark>
       <Emoji emoji="🖥️" />, sites
       <Emoji emoji="🌐" />, or maybe games
-      <Emoji emoji="🎮" />. Mostly, I love to code frontend with <u>React</u>,
+      <Emoji emoji="🎮" />. Mostly, I love to code frontend with <mark>React</mark>,
       but backend interests me too. Beside of computer stuffs, I like music, by
       means of listening
       <Emoji emoji="🎧" /> and playing some <Emoji emoji="🎹" />. It's usually

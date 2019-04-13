@@ -1,15 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-import { Emoji, Link, Input, TextArea, Button } from "../../components";
+import { Emoji, Link, Input, TextArea, Button, Loader } from "../../components";
 import axios from "axios";
 import { API_URL } from "../../api";
 
 const ClassHelperSection = styled.section`
   #title {
     margin-bottom: 0.75em;
-  }
-  p {
-    line-height: 1.75em;
   }
 
   form {
@@ -22,11 +19,15 @@ const ClassHelperSection = styled.section`
 
   .comment {
     margin: 1em;
-    // border: 1px solid red;
   }
 
   .comment-info {
     font-size: 1em;
+  }
+
+  #comments {
+    display: ${props => props.finishedLoadingComments ? 'block' : 'none'};
+    transition: all .5s ease-out;
   }
 `;
 
@@ -88,11 +89,11 @@ class Contact extends React.PureComponent {
   }
 
   render() {
-    const { name, email, comment, comments } = this.state;
+    const { name, email, comment, comments } = this.state;    
     return (
-      <ClassHelperSection>
+      <ClassHelperSection finishedLoadingComments={comments.length !== 0}>
         <h3 id="title">You can see me on</h3>
-        <p>
+        <p>my{' '}
           <Link
             target="https://github.com/davenathanael"
             label="GitHub"
@@ -104,7 +105,7 @@ class Contact extends React.PureComponent {
             label="LinkedIn"
             external
           />
-          , or my{" "}
+          , or {" "}
           <Link
             target="https://docs.google.com/document/d/1zNSh1WA_lJVBaaWhkwr8OUh7RkmQy7gwdH6rxMfXE20/edit?usp=sharing"
             label="resume"
@@ -123,6 +124,8 @@ class Contact extends React.PureComponent {
               onChange={this.inputChange}
               required
             />
+          </div>
+          <div className="form-control">
             <Input
               name="email"
               type="email"
@@ -137,7 +140,6 @@ class Contact extends React.PureComponent {
               name="comment"
               value={comment}
               rows={1}
-              cols={80}
               placeholder="Write something"
               onChange={this.inputChange}
               required
@@ -150,7 +152,8 @@ class Contact extends React.PureComponent {
           </div>
         </form>
         <h3>What others think of me</h3>
-        <section>
+        {comments.length === 0 && <Loader />} 
+        <section id="comments">
           {comments.map(c => (
             <div className="comment" key={c._id}>
               <p className="comment-content">"{c.comment}"</p>
