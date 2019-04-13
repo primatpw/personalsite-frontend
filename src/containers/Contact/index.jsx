@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Emoji, Link, Input, TextArea, Button } from "../../components";
+import { Emoji, Link, Input, TextArea, Button, Loader } from "../../components";
 import axios from "axios";
 import { API_URL } from "../../api";
 
@@ -147,6 +147,7 @@ class Contact extends React.PureComponent {
           </div>
         </form>
         <h3>What others think of me</h3>
+        <Loader />
         <section>
           {comments.map(c => (
             <div className="comment" key={c._id}>

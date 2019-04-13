@@ -7,5 +7,6 @@ import TextArea from "./TextArea";
 import Button from "./Button";
 import Footer from "./Footer";
 import Nav from "./Nav";
+import Loader from "./Loader";
 
-export { Container, Layout, Emoji, Link, Input, TextArea, Button, Footer, Nav };
+export { Container, Layout, Emoji, Link, Input, TextArea, Button, Footer, Nav, Loader };
