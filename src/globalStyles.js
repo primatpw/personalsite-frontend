@@ -14,7 +14,7 @@ export default createGlobalStyle`
     }
 
     @media (max-width: 576px) {
-      font-size: 12px;
+      font-size: 10px;
     }
   }
 
