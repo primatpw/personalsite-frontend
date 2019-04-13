@@ -1,6 +1,6 @@
 # Personal Website
 
-A simple website developed as an assignment for RISTEK 2019 Web Development junior member application.
+A simple personal website
 
 Site is live at [davenathanael.netlify.com](https://davenathanael.netlify.com)
 
