@@ -119,6 +119,8 @@ class Contact extends React.PureComponent {
               onChange={this.inputChange}
               required
             />
+          </div>
+          <div className="form-control">
             <Input
               name="email"
               type="email"
@@ -133,7 +135,6 @@ class Contact extends React.PureComponent {
               name="comment"
               value={comment}
               rows={1}
-              cols={80}
               placeholder="Write something"
               onChange={this.inputChange}
               required

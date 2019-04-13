@@ -10,6 +10,16 @@ const TextArea = styled.textarea`
   font-family: Karla, sans-serif;
   transition: border-bottom 0.5s ease;
 
+  width: 40%;
+
+  @media (max-width: 768px) {
+    width: 60%;
+  }
+
+  @media (max-width: 576px) {
+    width: 100%;
+  }
+
   &:focus {
     border-bottom: 2px solid black;
   }

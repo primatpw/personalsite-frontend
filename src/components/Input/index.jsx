@@ -9,7 +9,15 @@ const Input = styled.input`
   font-family: Karla, sans-serif;
   margin: 1em;
   transition: border-bottom 0.5s ease;
-  width: 20em;
+  width: 40%;
+
+  @media (max-width: 768px) {
+    width: 60%;
+  }
+
+  @media (max-width: 576px) {
+    width: 100%;
+  }
 
   &:focus {
     border-bottom: 2px solid black;
