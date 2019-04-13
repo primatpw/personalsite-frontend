@@ -88,7 +88,7 @@ class Contact extends React.PureComponent {
     return (
       <ClassHelperSection>
         <h3 id="title">You can see me on</h3>
-        <p>
+        <p>my{' '}
           <Link
             target="https://github.com/davenathanael"
             label="GitHub"
@@ -100,7 +100,7 @@ class Contact extends React.PureComponent {
             label="LinkedIn"
             external
           />
-          , or my{" "}
+          , or {" "}
           <Link
             target="https://docs.google.com/document/d/1zNSh1WA_lJVBaaWhkwr8OUh7RkmQy7gwdH6rxMfXE20/edit?usp=sharing"
             label="resume"
