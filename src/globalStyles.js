@@ -8,7 +8,16 @@ export default createGlobalStyle`
   html {
     box-sizing: border-box;
     font-size: 16px;
+
+    @media (max-width: 768px) {
+      font-size: 14px;
+    }
+
+    @media (max-width: 576px) {
+      font-size: 12px;
+    }
   }
+
 
   *, *:before, *:after {
     box-sizing: inherit;
