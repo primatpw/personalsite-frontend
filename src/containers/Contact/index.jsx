@@ -151,6 +151,8 @@ class Contact extends React.PureComponent {
             </Button>
           </div>
         </form>
+        {/*
+          disabled comments for now
         <h3>What others think of me</h3>
         {comments.length === 0 && <Loader />} 
         <section id="comments">
@@ -163,7 +165,7 @@ class Contact extends React.PureComponent {
               </p>
             </div>
           ))}
-        </section>
+        </section>*/}
       </ClassHelperSection>
     );
   }
