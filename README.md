@@ -2,7 +2,7 @@
 
 A simple personal website
 
-Site is live at [davenathanael.netlify.com](https://davenathanael.netlify.com)
+Site is live at [teresaprima.netlify.com](https://davenathanael.netlify.com)
 
 Built using:
 
